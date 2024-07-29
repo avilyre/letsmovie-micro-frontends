@@ -4,7 +4,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.ts",
+  entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
@@ -23,7 +23,7 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: [".js", ".ts"]
+    extensions: [".js", ".ts", ".tsx"]
   },
   optimization: {
     minimizer: [
@@ -33,14 +33,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|ts)$/,
+        test: /\.(js|ts|tsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
             presets: [
               "@babel/preset-env",
-              "@babel/preset-typescript"
+              "@babel/preset-typescript",
+              [
+                "@babel/preset-react",
+                { runtime: "automatic" }
+              ]
             ]
           }
         }
