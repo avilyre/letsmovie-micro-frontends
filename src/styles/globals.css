@@ -37,6 +37,6 @@ body {
 
 @media screen and (max-width: 1025px) {
   body {
-    font-size: 87.5%; // 14 * 100 / 16
+    font-size: 87.5%;
   }
 }
