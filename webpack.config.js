@@ -3,6 +3,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+const isDevMode = process.env.NODE_ENV === "development";
+
 module.exports = {
   entry: "./src/index.tsx",
   output: {
@@ -55,9 +57,13 @@ module.exports = {
         type: "asset/resource",
       },
       {
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         exclude: /node_modules/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"]
+        use: [
+          isDevMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader"
+        ]
       }
     ]
   }

@@ -1,13 +1,4 @@
-:root {
-  --shape-color: #1E293B;
-  --primary-color: #3B82F6;
-  --secondary-color: #94A3B8;
-  --tertiary-color: #E2E8F0;
-  --yellow-color: #EAB308;
-
-  --body-text-color: #1E293B;
-  --body-background-color: #F1F5F9;
-}
+@import "./variables";
 
 * {
   margin: 0;
@@ -31,8 +22,8 @@ button {
 }
 
 body {
-  color: var(--body-text-color);
-  background: var(--body-background-color);
+  color: $body-text-color;
+  background: $body-background-color;
 }
 
 @media screen and (max-width: 1025px) {
