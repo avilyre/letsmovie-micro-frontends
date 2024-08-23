@@ -57,6 +57,9 @@ importers:
       html-webpack-plugin:
         specifier: ^5.6.0
         version: 5.6.0(webpack@5.93.0(webpack-cli@5.1.4))
+      husky:
+        specifier: ^9.1.5
+        version: 9.1.5
       jsdom:
         specifier: ^24.1.1
         version: 24.1.1
@@ -2083,6 +2086,11 @@ packages:
   human-signals@5.0.0:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
+
+  husky@9.1.5:
+    resolution: {integrity: sha512-rowAVRUBfI0b4+niA4SJMhfQwc107VLkBUgEYYAOQAbqDCnra1nYh83hF/MDmhYs9t9n1E3DuKOrs2LYNC+0Ag==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   hyperdyperid@1.2.0:
     resolution: {integrity: sha512-Y93lCzHYgGWdrJ66yIktxiaGULYc6oGiABxhcO5AufBeOyoIdZF7bIfLaOrbM0iGIOXQQgxxRrFEnb+Y6w1n4A==}
@@ -5728,6 +5736,8 @@ snapshots:
   human-signals@2.1.0: {}
 
   human-signals@5.0.0: {}
+
+  husky@9.1.5: {}
 
   hyperdyperid@1.2.0: {}
 
